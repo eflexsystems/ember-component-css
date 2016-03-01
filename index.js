@@ -82,7 +82,7 @@ function monkeyPatch(EmberApp) {
     var preprocessedStyles = preprocessCss(stylesAndVendor, '/app/styles', '/assets', options);
 
     var vendorStyles    = this.concatFiles(stylesAndVendor, {
-      inputFiles: this.vendorStaticStyles.concat(['vendor/addons.css']),
+      inputFiles: this.vendorStaticStyles['/assets/vendor.css'].concat(['vendor/addons.css']),
       outputFile: this.options.outputPaths.vendor.css,
       description: 'Concat: Vendor Styles'
     });
